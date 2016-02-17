@@ -1,0 +1,3 @@
+[submodule "cmake"]
+	path = cmake
+	url = git@git.uni-konstanz.de:till-niese/cmake-utils.git
