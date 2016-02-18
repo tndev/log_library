@@ -11,8 +11,10 @@ set(SOURCES loglib/debug.h loglib/debug.cpp
 
 #${HEADERS}
 
-include_directories("./")
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
+
+#logginglib
 
 
 SET(CMAKE_DEBUG_POSTFIX _d)
@@ -24,6 +26,8 @@ if(MSVC)
     set_target_properties(${project_name} PROPERTIES IMPORT_PREFIX "lib")
 endif()
 
+#target_include_directories( ${project_name} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
+target_include_directories( ${project_name} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 set_property(TARGET ${project_name} PROPERTY CXX_STANDARD 14)
 set_property(TARGET ${project_name} PROPERTY CXX_STANDARD_REQUIRED ON)

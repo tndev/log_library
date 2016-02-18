@@ -11,6 +11,8 @@ include_directories("../${LOGLIB_SOURCE_DIR}")
 add_executable (${project_name} main.cpp)
 
 
+
+
 set_property(TARGET ${project_name} PROPERTY CXX_STANDARD 14)
 set_property(TARGET ${project_name} PROPERTY CXX_STANDARD_REQUIRED ON)
 

@@ -14,11 +14,9 @@ set(LOGLIB_VERSION_FULL "${LOGLIB_VERSION}.${LOGLIB_VERSION_PATCH}${LOGLIB_VERSI
 
 #set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
+SET(logginglib_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/library" )
 
-SET(LOGLIB_SOURCE_DIR "library" )
-
-
-option(LOGLIB_BUILD_EXAMPLES "Build the LOGLIBs example programs" ON)
+option(LOGGINGLIB_BUILD_EXAMPLES "Build the LOGLIBs example programs" OFF)
 
 if (BUILD_SHARED_LIBS)
 	set(_LOGLIB_BUILD_DLL 1)
@@ -30,6 +28,6 @@ endif()
 add_subdirectory (library)
 
 
-if (LOGLIB_BUILD_EXAMPLES)
+if (LOGGINGLIB_BUILD_EXAMPLES)
 	add_subdirectory (examples)
 endif()
